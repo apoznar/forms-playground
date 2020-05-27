@@ -1,63 +1,82 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms Playground</title>
     <link href="normalize.css" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <h1 id="title">
-            Survey Form
-          </h1>
-          <p id="description">
-            This survey is for test purposes only,
-          </p>
-          <form id="survey-form" action="/action_page.php">
-            <div>
-              <label id="name-label" for="name">Name:</label>
-              <input type="text" id="name" name="name" placeholder="First name">
-            </div>
-            <div>
-              <label id="email-label" for="email">Email:</label>
-              <input type="email" id="email" name="email" placeholder="Your email">
-            </div>
-            <div>
-              <label id="number-label" for="number">Number(1-100):</label>
-              <input type="number" id="number" name="number" min="1" max="100" placeholder="Number">
-            </div>
-            <div>
-              <select id="dropdown">
-            <option value="Beginner">Beginner</option>
-            <option value="Intermediate">Intermediate</option>
-            <option value="Expert">Expert</option>
-            <option value="Master">Master</option>
+      <h1 id="title">
+        Survey Form
+      </h1>
+      <p id="description">
+        This survey is for test purposes only,
+      </p>
+      <form id="survey-form" action="https://dev.cotenfrontend.pl">
+        <div>
+          <label id="name-label" for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="First name" />
+        </div>
+        <div>
+          <label id="email-label" for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email"
+          />
+        </div>
+        <div>
+          <label id="number-label" for="number">Number(1-100):</label>
+          <input
+            type="number"
+            id="number"
+            name="number"
+            min="1"
+            max="100"
+            placeholder="Number"
+          />
+        </div>
+        <div>
+          <select id="dropdown" name="experience">
+            <option name="Beginner" value="Beginner">Beginner</option>
+            <option name="Intermediate" value="Intermediate">Intermediate</option>
+            <option name="Expert" value="Expert">Expert</option>
+            <option name="Master" value="Master">Master</option>
           </select>
-            </div>
-            <div>
-              <fieldset name="radio-choice">
-                <legend>Choose one of these three difficulties:</legend>
-                <input id="easy" type="radio" name="items" value="easy">
-                <label for="easy">Easy</label><br>
-                <input id="normal" type="radio" name="items" value="normal">
-                <label for="normal">Normal</label><br>
-                <input id="hard" type="radio" name="items" value="hard">
-                <label for="hard">Hard</label>
-              </fieldset>
-            </div>
-            <div>
-              <label><input type="checkbox" value="ironman"> I want to start in an Ironman Mode!</label>
-              <label><input type="checkbox" value="hardcore"> I want to play in Hardcore Mode!</label>
-            </div>
-            <div>
-              <textarea rows="4" cols="50">
+        </div>
+        <div>
+          <fieldset name="difficulty" value="difficulty" id="difficulty">
+            <legend>Choose one of these three difficulties:</legend>
+            <input id="easy" type="radio" value="easy" />
+            <label for="easy">Easy</label><br />
+            <input id="normal" type="radio" value="normal" />
+            <label for="normal">Normal</label><br />
+            <input id="hard" type="radio" value="hard" />
+            <label for="hard">Hard</label>
+          </fieldset>
+        </div>
+        <div>
+          <label
+            ><input type="checkbox" name="ironman" value="ironman" id="ironman" /> I want to start in an
+            Ironman Mode!</label
+          >
+          <label
+            ><input type="checkbox" name="hardcore" value="hardcore" id="hardcore" /> I want to play in
+            Hardcore Mode!</label
+          >
+        </div>
+        <div>
+          <textarea rows="4" cols="50" name="comments">
           Please add additional comments!
-              </textarea>
-            </div>
-            <button id="submit" accesskey="a">Submit</button>
-          </form>
+              </textarea
+          >
+        </div>
+        <button id="submit" accesskey="a">Submit</button>
+      </form>
     </main>
-</body>
+  </body>
 </html>
